@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List Project</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="todo-app">
+      <div class="container">
+        <!-- Header -->
+        <header class="header">
+          <div class="header__logo">
+            <span>
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <h2 class="header__title">To Do List</h2>
+        </header>
+        <!-- Todo Form -->
+        <div class="form-wrapper">
+          <form class="form-wrapper__todo-form">
+            <input
+              type="text"
+              placeholder="Please Write a Todo ..."
+              class="form-wrapper__todo-input"
+            />
+            <button class="form-wrapper__todo-button">
+              <span>
+                <i class="fas fa-plus-circle"></i>
+              </span>
+            </button>
+          </form>
+          <!-- Todo Filter -->
+          <div class="form-wrapper__select-option">
+            <div class="form-wrapper__todos-filter" tabindex="1">
+              <input
+                class="select-option"
+                name="test"
+                value="all"
+                type="radio"
+                id="opt1"
+                checked
+              />
+              <label for="opt1" class="option">All</label>
+              <input
+                class="select-option"
+                name="test"
+                value="completed"
+                type="radio"
+                id="opt2"
+              />
+              <label for="opt2" class="option">Completed</label>
+              <input
+                class="select-option"
+                name="test"
+                value="uncompleted"
+                type="radio"
+                id="opt3"
+              />
+              <label for="opt3" class="option last-option">Uncompleted</label>
+              <!-- <input
+                class="select-option"
+                name="test"
+                value="4"
+                type="radio"
+                id="opt4"
+              />
+              <label for="opt4" class="option">Bananas</label>
+              <input
+                class="select-option"
+                name="test"
+                value="5"
+                type="radio"
+                id="opt5"
+              />
+              <label for="opt5" class="option last-option">Watermelon</label> -->
+            </div>
+          </div>
+        </div>
+        <!-- Todo Container -->
+        <div class="todo-container">
+          <div class="sub-container">
+            <ul class="todo-list">
+              <!-- <li class="todo-list__todo">
+                <span class="todo-list__title">react.js</span>
+                <div class="todo-list__control">
+                  <span class="icon"><i class="far fa-check-square"></i></span>
+                  <span class="icon"><i class="far fa-edit"></i></span>
+                  <span class="icon"><i class="far fa-trash-alt"></i></span>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal__title">
+          <span class="modal__dot"></span>
+          <p class="modal__text">
+            Please click outside the input after editing the task
+          </p>
+          <p class="modal__text-hide">Edit Please :)</p>
+        </div>
+        <div class="modal__edit">
+          <!-- <input
+            type="text"
+            class="modal__input"
+            placeholder="Please Edit Your Task ..."
+          /> -->
+          <button class="modal__cancel">Cancel</button>
+        </div>
+      </div>
+      <!-- Backdrop -->
+      <div class="backdrop"></div>
+    </section>
+    <!-- JS -->
+    <script src="./js/Main.js" type="module"></script>
+  </body>
+</html>
